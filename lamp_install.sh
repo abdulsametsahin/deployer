@@ -19,7 +19,6 @@ sudo echo '<IfModule mod_dir.c>
 sudo service apache2 restart
 
 #Mysql
-xport DEBIAN_FRONTEND=noninteractive
-debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password password $MYSQL_PASS"
-debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password_again password $MYSQL_PASS"
-apt-get install --assume-yes mysql-server-5.7 mysql-client
+sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password password $MYSQL_PASS"
+sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password_again password $MYSQL_PASS"
+sudo apt-get -y install mysql-server-5.7
