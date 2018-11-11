@@ -1,8 +1,8 @@
 HOST="$1"
 PUBLIC_FOLDER="$2"
 
-sudo mkdir -p /var/www/$HOST/public_html
-sudo chown -R $USER:$USER /var/www/$HOST/public_html
+sudo mkdir -p /var/www/$HOST/$PUBLIC_FOLDER
+sudo chown -R $USER:$USER /var/www/$HOST
 sudo chmod -R 755 /var/www
 touch /var/www/$HOST/$PUBLIC_FOLDER/index.html
 sudo echo "it works" >> /var/www/$HOST/$PUBLIC_FOLDER/index.html
