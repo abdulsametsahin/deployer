@@ -22,3 +22,6 @@ sudo service apache2 restart
 sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password password $MYSQL_PASS"
 sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password_again password $MYSQL_PASS"
 sudo apt-get -y install mysql-server-5.7
+
+#SSH KEY GENERATE IF NOT EXISTS
+cat /dev/zero | ssh-keygen -q -N ""
