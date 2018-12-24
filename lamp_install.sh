@@ -3,6 +3,8 @@ MYSQL_PASS="$1"
 sudo apt -y update
 #Apache2
 sudo apt -y install apache2
+sudo a2enmod rewrite
+sudo service apache2 restart
 #PHP
 sudo apt -y install software-properties-common
 sudo add-apt-repository -y ppa:ondrej/php
