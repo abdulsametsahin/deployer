@@ -1,4 +1,4 @@
-## Linux UbuntuEasy LAMP Installation and Apache Virtual Host Creation Scripts
+## Linux Ubuntu Easy LAMP Installation and Apache Virtual Host Creation Scripts
 
 ### LAMP Install
 
