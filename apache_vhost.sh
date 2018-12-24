@@ -11,7 +11,7 @@ sudo echo "<VirtualHost *:80>
     ServerAdmin admin@$DOMAIN
     ServerName $DOMAIN
     ServerAlias www.$DOMAIN
-    DocumentRoot /var/www/$DOMAIN/$PUBLIC_FOLDER
+    DocumentRoot '/var/www/$DOMAIN/$PUBLIC_FOLDER'
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
     
