@@ -14,6 +14,13 @@ sudo echo "<VirtualHost *:80>
     DocumentRoot /var/www/$DOMAIN/$PUBLIC_FOLDER
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+    <Directory /var/www/$DOMAIN/$PUBLIC_FOLDER>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
 </VirtualHost>" >> /etc/apache2/sites-available/$DOMAIN.conf
 
 sudo a2ensite $DOMAIN.conf
