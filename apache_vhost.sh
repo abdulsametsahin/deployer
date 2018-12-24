@@ -4,6 +4,7 @@ PUBLIC_FOLDER="$2"
 sudo mkdir -p /var/www/$DOMAIN/$PUBLIC_FOLDER
 sudo chown -R $USER:$USER /var/www/$DOMAIN
 sudo chmod -R 755 /var/www
+sudo chmod -R 755 /var/www/$DOMAIN
 touch /var/www/$DOMAIN/$PUBLIC_FOLDER/index.html
 sudo echo "it works $DOMAIN" >> /var/www/$DOMAIN/$PUBLIC_FOLDER/index.html
 
